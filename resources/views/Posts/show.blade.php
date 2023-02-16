@@ -10,7 +10,11 @@
                       @method('DELETE')
                       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
     </form>
+<<<<<<< HEAD
     <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info">Updat</a>
+=======
+    <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info">Update</a>
+>>>>>>> 3e7efb81a436086b5a6006d199eaa1837631270f
 </div>
 </div>
     
