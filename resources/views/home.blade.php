@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>
-   Welcome to my blog
-</h1>
-<a href="/posts">My Articles</a>
+
+
+
+<div class="alert alert-primary" role="alert">
+Welcome to my blog!
+</div>
+<div class="text-center">
+<a href="/posts" class="btn btn-dark">My Articles</a>
+</div>
 @endsection
