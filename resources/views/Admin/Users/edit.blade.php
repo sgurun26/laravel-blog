@@ -30,7 +30,7 @@
             <label for="content">Role</label>
             <select name="role" class="custom-select" id="inputGroupSelect01">
             <option value="user" {{ $user->role == 'user' ? 'selected' : '' }}>user</option>
-            <option value="admin" {{ $user->role == 'author' ? 'selected' : '' }}>author</option>
+            <option value="author" {{ $user->role == 'author' ? 'selected' : '' }}>author</option>
             </select>
         </div>
         @else

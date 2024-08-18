@@ -14,7 +14,6 @@
       <th scope="col">SN</th>
       <th scope="col">Title</th>
       <th scope="col">Content</th>
-      <th scope="col">Author</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -25,7 +24,6 @@
       <th scope="row">{{ $loop->iteration }}</th>
       <td> <a href="{{ route('posts.show', $post->id) }}"> {{ $post->title }}</a></td>
       <td>{{ $post->content }}</td>
-      <td>{{ $post->user }}</td>
       <td class="flex">
         <form action="{{ route('posts.destroy', $post->id) }}" method="post">
                       @csrf

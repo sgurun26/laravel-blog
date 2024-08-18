@@ -96,9 +96,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="/admin/posts">Posts</a>
             </li>
+            @if ($user->role == 'admin')
             <li class="nav-item">
                 <a class="nav-link" href="/admin/users">Users</a>
             </li>
+    @endif
+     
         </ul>
     </div>
 

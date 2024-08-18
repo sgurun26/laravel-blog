@@ -3,10 +3,17 @@
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
+
 
 
 
 Auth::routes();
+
+Route::get('/', function () {
+    $posts = Post::all();
+    return view('welcome', compact('posts'));
+});
 
 Route::prefix('admin')->middleware ('admin')->group(function () {
     Route::get('/', function () {
