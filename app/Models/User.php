@@ -22,7 +22,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
+
+    // protected static function booted(){
+    //     static::creating(function (User $user){
+    //         dd($user);
+    //         // $post ->role = ;
+    //     });
+    // }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,5 +53,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function post():HasMany{
+        return $this->hasMany(Post::class);
     }
 }
