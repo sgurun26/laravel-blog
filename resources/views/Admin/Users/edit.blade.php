@@ -34,7 +34,7 @@
             </select>
         </div>
         @else
-        <p><strong>Role:</strong> Admin</p>
+        <p><strong>Role:</strong> Your are Admin</p>
     @endif
 
         <button type="submit" class="btn btn-primary">Edit</button>
