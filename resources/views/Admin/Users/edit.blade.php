@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Blog Post Create</h1>
+    <h1>Update user</h1>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -13,17 +13,30 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('posts.update', $post->id) }}"" method="POST">
+    <form action="{{ route('users.update', $user->id) }}"" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" name="title" value="{{ $post->title }}" class="form-control">
+            <label for="title">Name</label>
+            <input type="text" value="{{$user->name}}" name="name" class="form-control">
         </div>
         <div class="form-group">
-            <label for="content">Content</label>
-            <textarea name="content" class="form-control">{{ $post->content }} </textarea>
+            <label for="content">Email</label>
+            <input name="email" value="{{$user->email}}" type="email" class="form-control">
         </div>
+
+        @if ($user->role !== 'admin')
+        <div class="form-group">
+            <label for="content">Role</label>
+            <select name="role" class="custom-select" id="inputGroupSelect01">
+            <option value="user" {{ $user->role == 'user' ? 'selected' : '' }}>user</option>
+            <option value="admin" {{ $user->role == 'author' ? 'selected' : '' }}>author</option>
+            </select>
+        </div>
+        @else
+        <p><strong>Role:</strong> Admin</p>
+    @endif
+
         <button type="submit" class="btn btn-primary">Edit</button>
     </form>
 </div>

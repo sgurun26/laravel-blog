@@ -27,10 +27,10 @@
       <td>{{ $user->email }}</td>
       <td>{{ $user->role }}</td>
       <td class="flex">
-        <form action="" method="post">
+        <form action="{{ route('users.destroy', $user->id) }}" method="post">
                       @csrf
                       @method('DELETE')
-                      <a href="" class="block btn btn-secondary">Update</a>
+                      <a href="{{ route('users.edit', $user->id) }}" class="block btn btn-secondary">Update</a>
                       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
     </form>
       </td>
