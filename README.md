@@ -6,13 +6,7 @@ https://github.com/sgurun26/laravel-blog.git
 This project is all about the full-stack blog application made with use of PHP Laravel.
 
 # Challenges Faced and Approach
-The first challenge was setting up mongodb with laravel. Finally I fix the issue myself after long hours. It was 
-actually the php version was from laragon but whenever I install mongodb package it uses php which is from xampp in 
-windows environment variable. 
-
-Another challenge was understanding the proper flow and adding role based feature.
+I already have the post controller so I was having difficulties when sending the posts but I managed to make new controller and successfully send the data according to api endpoints.
 
 # Additional Feature
-When user register from the builtin register page the role was automaticlly set to user
-
-In this part only the admin and role parts was focused rather than UI.
+Tried to resolve the previous mistakes like my admin page was having auth errors as user data is not passed to view
