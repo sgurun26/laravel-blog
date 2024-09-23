@@ -6,8 +6,7 @@ https://github.com/sgurun26/laravel-blog.git
 This project is all about the full-stack blog application made with use of PHP Laravel.
 
 # Challenges Faced and Approach
-I have never used laravel but have done Django and MERN Stack so have some problem with syntax and way of doing things. 
-Here I followed the lecture tutorials and videos. Moreover, I followed the official documentation and some blog posts online.
+I already have the post controller so I was having difficulties when sending the posts but I managed to make new controller and successfully send the data according to api endpoints.
 
 # Additional Feature
-Made some little UI than that of just following lecture videos and also edit and delete button
+Tried to resolve the previous mistakes like my admin page was having auth errors as user data is not passed to view

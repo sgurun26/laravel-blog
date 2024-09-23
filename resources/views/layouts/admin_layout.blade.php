@@ -12,7 +12,23 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+
+    <style>
+        .sidebar {
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            top: 60px; /* Stay at the top */
+            left: 0;
+            width: 250px; /* The width of the sidebar */
+            background-color: #f2f2f2; /* Background color */
+            padding: 15px; /* Padding */
+        }
+        .content {
+            margin-left: 250px; /* Same width as the sidebar */
+            padding: 15px;
+        }
+    </style>
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -21,7 +37,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    CatsAdmin
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -71,10 +87,27 @@
                 </div>
             </div>
         </nav>
+            
+        <div class="sidebar">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="/admin">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/posts">Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users">Users</a>
+            </li>
+     
+        </ul>
+    </div>
 
+    <div class="content">
         <main class="py-4">
             @yield('content')
-        </main>
+        <main/>
     </div>
 </body>
 </html>
+
