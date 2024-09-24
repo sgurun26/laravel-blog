@@ -34,7 +34,7 @@ return [
         'mongodb' => [
 
             'driver' => 'mongodb',
-            'dsn' => 'mongodb://localhost:27017',
+            'dsn' => 'mongodb+srv://sumanlaravel400:sumanlaravel400@larablogs.vho12.mongodb.net/',
             'database'=>env('MONGO_DB_DATABASE')
         ],
 
